@@ -98,57 +98,87 @@ li {
 }
 
 /*for wrapper*/
+
 .wrapper {
-  max-width: 1360px;
-  width: 86%; 
+  max-width: 1519px;
+  width: 90%; 
   margin: 0 auto;
 }
-/*=================================
-  Header styling starts here
-=================================*/
 
-
-
-
-
-
-/*=================================
-  Header styling ends here
-=================================*/  
+*{ box-sizing: border-box; }
 
 /*=================================
   main styling starts here
 =================================*/
+.bloginfo-container > .wrapper { padding: 13px 0; }
+.fetchdata {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
+.fetchdata li {
+  padding: 22px 0;
+  margin-bottom: 32px;
+  border-radius: 6px;
+  background-color: #E7E9EB;
+  flex-basis: 31%;
+}
 
+.fetchdata h2 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 600;
+}
 
+.fetchdata p {
+  padding: 4% 4% 0;
+  font-size: 15px;
+}
 
+.more,
+.less {
+  padding: 0.5% 2%;
+  border-radius: 4px;
+  background-color: #059862;
+  color: #FFF;
+  font-size: 25px;
+  text-transform: capitalize;
+  transition: background-color 800ms;
+}
 
+.more:hover,
+.less:hover {
+  background-color: #BDBEC0;
+  color: #000;
+}
 
-
+.hideless { display: none; }
+.showless { display: inline-block; }
+.hide { display: none;}
 
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+@media only screen and (max-width: 1024px) {
+  .fetchdata h2 { font-size: 16px; }
+  .fetchdata p { font-size: 13px; }
+} 
 
+@media only screen and (max-width: 767px) {
+  .fetchdata p { text-align: center; }
+  .fetchdata li {
+    margin-bottom: 36px;
+    flex-basis: 48%;
+  }
+}
 
-
-}  
+@media only screen and (max-width: 480px) {
+  .fetchdata li { 
+    margin-bottom: 29px;
+    flex-basis: 100%;
+  }
+}
